@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RecyclerViewParentLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/RecyclerViewLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_vehicle_id"
+            style="@style/RegularTextViewGold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="#10876" />
+
+        <ImageView
+            android:id="@+id/iv_vehicle_type"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginTop="@dimen/margin_very_small"
+            android:contentDescription="@string/vehicle_type_image"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vehicle_id"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_vehicle_type"
+            style="@style/RegularTextView"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_vehicle_type"
+            app:layout_constraintStart_toEndOf="@id/iv_vehicle_type"
+            app:layout_constraintTop_toTopOf="@+id/iv_vehicle_type"
+            tools:text="TAXI" />
+
+        <TextView
+            android:id="@+id/tv_header_longitude"
+            style="@style/RegularTextViewGold"
+            android:layout_marginEnd="@dimen/margin_very_small"
+            android:text="@string/longitude"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_longitude"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_longitude"
+            style="@style/RegularTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="53.5879" />
+
+        <TextView
+            android:id="@+id/tv_header_latitude"
+            style="@style/RegularTextViewGold"
+            android:layout_marginTop="@dimen/margin_very_small"
+            android:layout_marginEnd="@dimen/margin_very_small"
+            android:text="@string/latitude"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_longitude"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_longitude" />
+
+        <TextView
+            android:id="@+id/tv_latitude"
+            style="@style/RegularTextView"
+            android:layout_marginTop="@dimen/margin_very_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_longitude"
+            tools:text="9.9039" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
